@@ -1,0 +1,28 @@
+# metinler.tam — metin işleme örneği
+# Calistir: çalıştır metinler
+
+yaz "=== Metin İşlevleri ==="
+
+ad = "Tamga İşletim Sistemi"
+yaz "uzunluk : " + uzunluk(ad)
+yaz "ilk 5   : " + parça(ad, 0, 5)
+yaz "büyük?  : " + içerir(ad, "İşletim")
+yaz "başlar? : " + başlar(ad, "Tamga")
+yaz "konum   : " + bul(ad, "Sistem")
+
+# Bir CSV satırını parçala ve gez
+satir = "elma,armut,muz,üzüm"
+meyveler = parçala(satir, ",")
+yaz "meyve sayısı: " + uzunluk(meyveler)
+i = 1
+her m içinde meyveler
+    yaz "  " + i + ". " + m
+    i = i + 1
+bitir
+
+# Değiştir ve birleştir
+yaz değiştir("yol/dosya/ad", "/", " > ")
+yaz birleştir(["a", "b", "c"], "-")
+
+# Kırpma
+yaz "[" + kırp("   boşluklu   ") + "]"

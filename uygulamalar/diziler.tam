@@ -1,0 +1,37 @@
+# diziler.tam — dizi (array) ozellikleri ornegi
+# Calistir: çalıştır diziler
+
+yaz "=== Diziler ==="
+
+sayilar = [10, 20, 30, 40]
+yaz "dizi      : " + sayilar
+yaz "uzunluk   : " + uzunluk(sayilar)
+yaz "ilk öğe   : " + sayilar[0]
+yaz "son öğe   : " + sayilar[uzunluk(sayilar) - 1]
+
+# Öğe değiştirme
+sayilar[1] = 99
+yaz "değişen   : " + sayilar
+
+# Dinamik büyütme
+ekle(sayilar, 50)
+yaz "ekleme    : " + sayilar
+son = çıkar(sayilar)
+yaz "çıkarılan : " + son
+
+# Toplam hesaplama (döngü ile)
+işlev topla_dizi(d)
+    toplam = 0
+    i = 0
+    iken i < uzunluk(d)
+        toplam = toplam + d[i]
+        i = i + 1
+    bitir
+    döndür toplam
+bitir
+
+yaz "toplam    : " + topla_dizi(sayilar)
+
+# İç içe dizi
+izgara = [[1, 2], [3, 4]]
+yaz "izgara[1][0] = " + izgara[1][0]

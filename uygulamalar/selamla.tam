@@ -1,0 +1,16 @@
+# selamla.tam — etkileşimli giriş örneği (oku / sayı yerleşikleri)
+# Calistir: çalıştır selamla
+
+yaz "Adınız nedir?"
+ad = oku()
+yaz "Merhaba " + ad + "!"
+
+yaz "Bir sayı girin:"
+n = sayı(oku())
+yaz "Karesi: " + (n * n)
+
+eğer n > 100 ise
+    yaz "Büyük bir sayı seçtiniz."
+değilse
+    yaz "Güzel bir sayı."
+bitir

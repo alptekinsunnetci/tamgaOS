@@ -1,0 +1,17 @@
+# led.tam — GPIO + zaman modulu ornegi (LED yakip sondurme)
+# Pico W'de harici LED icin bir GPIO pini secin (orn. 15).
+# Calistir: çalıştır led
+
+pin = 15
+gpio.yon(pin, 1)          # pin cikis
+
+yaz "LED yanip sonuyor (5 kez)..."
+sayac = 0
+iken sayac < 5
+    gpio.yaz(pin, 1)      # yak
+    zaman.bekle(200)
+    gpio.yaz(pin, 0)      # sondur
+    zaman.bekle(200)
+    sayac = sayac + 1
+bitir
+yaz "bitti"

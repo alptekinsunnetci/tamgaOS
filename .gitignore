@@ -1,0 +1,15 @@
+# Yapı çıktıları
+build/
+build-pico/
+*.exe
+*.o
+*.uf2
+*.elf
+*.map
+*.bin
+
+# Kalıcı flash imajı (host) ve geçici
+tamga_flash.bin
+*.img
+*.tmp
+*.log

@@ -1,0 +1,38 @@
+# sozlukler.tam — sözlük (anahtar-değer) örneği
+# Calistir: çalıştır sozlukler
+
+yaz "=== Sözlükler ==="
+
+kisi = {"ad": "Ayşe", "yas": 28, "sehir": "İzmir"}
+yaz "sözlük : " + kisi
+yaz "ad     : " + kisi["ad"]
+yaz "yaş    : " + kisi["yas"]
+
+# Değer güncelleme ve yeni anahtar
+kisi["yas"] = 29
+kisi["meslek"] = "mühendis"
+yaz "güncel : " + kisi
+yaz "anahtar sayısı: " + uzunluk(kisi)
+
+# Anahtar var mı?
+eğer var_mı(kisi, "meslek") ise
+    yaz "meslek bilgisi var: " + kisi["meslek"]
+bitir
+
+# Tüm anahtarları gez
+anahtar_listesi = anahtarlar(kisi)
+i = 0
+iken i < uzunluk(anahtar_listesi)
+    a = anahtar_listesi[i]
+    yaz "  " + a + " = " + kisi[a]
+    i = i + 1
+bitir
+
+# Anahtar sil
+sil_anahtar(kisi, "sehir")
+yaz "silme sonrası: " + kisi
+
+# İç içe: sözlük içinde dizi ve sözlük
+veri = {"isimler": ["Ali", "Veli"], "adres": {"il": "Bursa"}}
+yaz "ilk isim: " + veri["isimler"][0]
+yaz "il      : " + veri["adres"]["il"]

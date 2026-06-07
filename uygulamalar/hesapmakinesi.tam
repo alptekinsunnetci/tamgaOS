@@ -1,0 +1,30 @@
+# hesapmakinesi.tam — temel aritmetik ve islev ornegi
+# Calistir: çalıştır hesapmakinesi
+
+yaz "=== Hesap Makinesi ==="
+
+a = 12
+b = 4
+yaz "a = " + a
+yaz "b = " + b
+yaz "toplam : " + (a + b)
+yaz "fark   : " + (a - b)
+yaz "çarpım : " + (a * b)
+yaz "bölüm  : " + (a / b)
+yaz "kalan  : " + (a % b)
+
+işlev faktoriyel(n)
+    sonuc = 1
+    i = 1
+    iken i <= n
+        sonuc = sonuc * i
+        i = i + 1
+    bitir
+    döndür sonuc
+bitir
+
+yaz "5! = " + faktoriyel(5)
+
+eğer (a + b) == 16 ve a > b ise
+    yaz "Mantık sınaması: doğru"
+bitir

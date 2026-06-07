@@ -1,0 +1,17 @@
+# bilgi.tam — sistem ve dosya modullerini kullanan ornek
+# Calistir: çalıştır bilgi
+
+yaz "=== Sistem Bilgisi ==="
+yaz "Açılıştan beri (ms): " + sistem.sure()
+yaz "Kullanılan bellek  : " + sistem.bellek()
+yaz "Boş bellek         : " + sistem.bellek_bos()
+
+# Bir gunluk dosyasi yaz ve geri oku
+dosya.yaz("/gunlukler/acilis.log", "Tamga OS açıldı")
+yaz "Günlük: " + dosya.oku("/gunlukler/acilis.log")
+
+eğer sistem.bellek_bos() > 1000 ise
+    yaz "Bellek durumu: iyi"
+değilse
+    yaz "Bellek durumu: düşük"
+bitir

@@ -1,0 +1,25 @@
+# dongu.tam — 'her' (for-each) döngüsü örneği
+# Calistir: çalıştır dongu
+
+yaz "=== Dizi üzerinde her ==="
+sayilar = [5, 10, 15, 20]
+toplam = 0
+her s içinde sayilar
+    yaz "  öğe: " + s
+    toplam = toplam + s
+bitir
+yaz "toplam: " + toplam
+
+yaz "=== Sözlük üzerinde her (anahtarlar) ==="
+fiyatlar = {"elma": 12, "armut": 8, "muz": 15}
+her urun içinde fiyatlar
+    yaz "  " + urun + " = " + fiyatlar[urun] + " TL"
+bitir
+
+yaz "=== İç içe her ==="
+matris = [[1, 2], [3, 4]]
+her satir içinde matris
+    her hucre içinde satir
+        yaz "  hücre: " + hucre
+    bitir
+bitir

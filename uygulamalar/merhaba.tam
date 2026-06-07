@@ -1,0 +1,24 @@
+# merhaba.tam — Tamga OS tanitim uygulamasi
+# Calistir: çalıştır merhaba
+
+yaz "Merhaba Dünya"
+
+sayi = 10
+eğer sayi > 5 ise
+    yaz "Büyük"
+değilse
+    yaz "Küçük"
+bitir
+
+i = 0
+iken i < 5
+    yaz i
+    i = i + 1
+bitir
+
+işlev topla(a, b)
+    döndür a + b
+bitir
+
+toplam = topla(10, 20)
+yaz "toplam = " + toplam
